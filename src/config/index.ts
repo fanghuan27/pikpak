@@ -2,7 +2,6 @@ export const proxy = [
   'https://diii.tk',
   'https://pikpak.he13797739994.ga',
   'https://pikpak.89u.xyz',
-  'https://api-pikpak.gogoback.cf',
   'https://api-pikpak.tjsky.cf',
   'https://api-pikpak.go-back.cf',
 ]
