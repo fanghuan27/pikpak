@@ -127,11 +127,6 @@ import { useRoute, useRouter } from 'vue-router'
       icon: renderIcon(Copy)
     },
     {
-      label: '资源库',
-      key: 'share',
-      icon: renderIcon(Share)
-    },
-    {
       label: '设置',
       key: 'setting',
       icon: renderIcon(Settings)
