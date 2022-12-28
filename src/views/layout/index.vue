@@ -30,7 +30,7 @@
         <p style="margin-bottom: 0;">
           <n-tooltip :width="600" placement="right">
               <template #trigger>
-                <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/AxcRXUu">￥9.9购体验会员月卡</a>
+                <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/Ox7fLOu">￥体验月卡购买(可与首月优惠叠加）</a>
               </template>
               
           </n-tooltip>
