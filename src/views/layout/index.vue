@@ -76,7 +76,7 @@
       </template>
       <n-input placeholder="会员码" v-model:value="code"></n-input>
       <p>
-        <a style="color: #306eff;" target="_blank" href="https://k.youshop10.com/JGDtoxg6">【0.33元/天】PikPak体验会员VIP年卡-可与7天免费会员码叠加-每人只能购买使用一次，感谢支持</a>
+        <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/Ox7fLOu">PikPak体验会员VIP年卡-限新用户购买使用一次，可与app首月优惠叠加</a>
       </p>
 
       <template #action>
