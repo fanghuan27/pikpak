@@ -30,7 +30,7 @@
         <p style="margin-bottom: 0;">
           <n-tooltip :width="600" placement="right">
               <template #trigger>
-                <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/Ox7fLOu">￥体验月卡购买(可与首月优惠叠加）</a>
+                <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/FANKzIu">￥169.体验年卡购买(可与app首月/首年优惠叠加）</a>
               </template>
               
           </n-tooltip>
@@ -76,7 +76,7 @@
       </template>
       <n-input placeholder="会员码" v-model:value="code"></n-input>
       <p>
-        <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/Ox7fLOu">PikPak体验会员VIP年卡-限新用户购买使用一次，可与app首月优惠叠加</a>
+        <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/FANKzIu">PikPak169体验会员VIP年卡-限新用户购买使用一次，可与app首月/首年优惠叠加</a>
       </p>
 
       <template #action>
