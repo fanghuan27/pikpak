@@ -114,7 +114,7 @@ const showMessage = () => {
   }
 }
 const getApk = () => {
-  http.get('https://mypikpak.net/drive/activity/invited?invitation-code=161818')
+  http.get('https://api-drive.mypikpak.net/package/v1/apk/url/161818')
     .then((res:any) => {
       window.open(res.data.apk_url)
     })
