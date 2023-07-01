@@ -23,7 +23,7 @@
             <n-button type="primary" class="block" :loading="loading" @click="loginPost">登陆</n-button>
           </n-form-item>
           <n-form-item label="">
-            <a target="_blank" href="https://i.mypikpak.net/v1/file/center/account/v1/password/?type=forget_password&locale=zh-cn" class="forget-password">忘记密码</a>
+            <a target="_blank" href="https://i.mypikpak.com/v1/file/center/account/v1/password/?type=forget_password&locale=zh-cn" class="forget-password">忘记密码</a>
             <!--<router-link to="/register" class="register">注册</router-link>-->
             <a href="javascript:;" @click="getApk">去下载注册得5天VIP</a>
           </n-form-item>
@@ -74,7 +74,7 @@ const loginPost = () => {
     return false
   }
   loading.value = true
-  http.post('https://user.mypikpak.net/v1/auth/signin', {
+  http.post('https://user.mypikpak.com/v1/auth/signin', {
     "captcha_token": "",
     "client_id": "YNxT9w7GMdWvEOKa",
     "client_secret": "dbw2OtmVEeuUvIptb1Coyg",
@@ -114,7 +114,7 @@ const showMessage = () => {
   }
 }
 const getApk = () => {
-  http.get('https://api-drive.mypikpak.net/package/v1/apk/url/161818')
+  http.get('https://api-drive.mypikpak.com/package/v1/apk/url/161818')
     .then((res:any) => {
       window.open(res.data.apk_url)
     })
