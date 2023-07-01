@@ -94,7 +94,7 @@ const randomString = () =>  {
 }
 const deviceId = randomString()
 const initCaptcha = (action?:string) => {
-  return http.post('https://user.mypikpak.net/v1/shield/captcha/init?client_id=YNxT9w7GMdWvEOKa', {
+  return http.post('https://user.mypikpak.com/v1/shield/captcha/init?client_id=YNxT9w7GMdWvEOKa', {
     action: action || "POST:/v1/auth/verification",
     captcha_token: loginData.value.captcha_token || '',
     client_id: "YNxT9w7GMdWvEOKa",
@@ -122,7 +122,7 @@ const sendCode = () => {
     codeLoading.value = true
     initCaptcha("POST:/v1/auth/verification")
       .then(() => {
-        http.post('https://user.mypikpak.net/v1/auth/verification?client_id=YNxT9w7GMdWvEOKa', {
+        http.post('https://user.mypikpak.com/v1/auth/verification?client_id=YNxT9w7GMdWvEOKa', {
           captcha_token: loginData.value.captcha_token,
           client_id: "YNxT9w7GMdWvEOKa",
           phone_number: loginData.value.phone_number,
@@ -162,14 +162,14 @@ const register = (e:Event) => {
   formRef.value.validate((errors:any)=>{
     if(!errors) {
       loading.value = true
-      http.post('https://user.mypikpak.net/v1/auth/verification/verify?client_id=YNxT9w7GMdWvEOKa', {
+      http.post('https://user.mypikpak.com/v1/auth/verification/verify?client_id=YNxT9w7GMdWvEOKa', {
         client_id: "YNxT9w7GMdWvEOKa",
         verification_id: loginData.value.verification_id,
         verification_code: loginData.value.verification_code
       }).then((res:any) => {
         initCaptcha(isUser.value ? 'POST:/v1/auth/signin': 'POST:/v1/auth/signup')
           .then(() => {
-            let url = 'https://user.mypikpak.net/v1/auth/signup'
+            let url = 'https://user.mypikpak.com/v1/auth/signup'
             let data:any = {
               captcha_token: loginData.value.captcha_token,
               client_id: 'YNxT9w7GMdWvEOKa',
@@ -177,7 +177,7 @@ const register = (e:Event) => {
               verification_token: res.data.verification_token
             }
             if(isUser.value) {
-              url = 'https://user.mypikpak.net/v1/auth/signin'
+              url = 'https://user.mypikpak.com/v1/auth/signin'
               data.username = loginData.value.phone_number
             } else {
               data.phone_number = loginData.value.phone_number
