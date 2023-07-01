@@ -18,8 +18,8 @@
       </div>
       <template v-if="shareInfo?.share_status === 'PASS_CODE_EMPTY' || shareInfo?.share_status === 'PASS_CODE_ERROR'">
         <div class="share-password">
-          <a href="https://mypikpak.net/" target="_blank" class="logo-box">
-            <img src="https://www.mypikpak.net/logo.png" class="logo-box__icon" alt="">
+          <a href="https://mypikpak.com/" target="_blank" class="logo-box">
+            <img src="https://www.mypikpak.com/logo.png" class="logo-box__icon" alt="">
             <div class="logo-box__text">PikPak</div>
           </a>
           <n-form class="password-form">
@@ -187,7 +187,7 @@ const getInfo = () => {
     })
   }
   loading.value = true;
-  (http.get('https://api-drive.mypikpak.net/drive/v1/share' + (route.query.id && shareInfo.value?.pass_code_token ? '/detail' : ''), {
+  (http.get('https://api-drive.mypikpak.com/drive/v1/share' + (route.query.id && shareInfo.value?.pass_code_token ? '/detail' : ''), {
       params: {
         share_id: id.value,
         parent_id: route.query.id,
@@ -227,7 +227,7 @@ const restore = () => {
   if(route.query.id) {
     ancestor_ids.push(ancestorId.value)
   }
-  http.post('https://api-drive.mypikpak.net/drive/v1/share/restore', {
+  http.post('https://api-drive.mypikpak.com/drive/v1/share/restore', {
     share_id: id.value,
     pass_code_token: shareInfo.value?.pass_code_token,
     ancestor_ids: ancestor_ids,
@@ -253,7 +253,7 @@ const goHome = () => {
   window.location.href = './'
 }
 const postShare = () => [
-  http.post('https://api-drive.mypikpak.net/drive/v1/share', {
+  http.post('https://api-drive.mypikpak.com/drive/v1/share', {
       "share_to":"copy",
       "title":"云盘资源分享",
       "restore_limit":"-1",
