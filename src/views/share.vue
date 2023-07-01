@@ -144,7 +144,7 @@ const addUrl = (url:string) => {
       folder_type: "DOWNLOAD"
     }
   }
-  http.post('https://api-drive.mypikpak.com/drive/v1/files', postData)
+  http.post('https://api-drive.mypikpak.net/drive/v1/files', postData)
     .then((res:any) => {
       if(res.data.upload_type === 'UPLOAD_TYPE_UNKNOWN' || url.indexOf('PikPak://') === -1) {
         window.$message.success('添加成功')
