@@ -66,7 +66,7 @@ import { CircleX } from '@vicons/tabler'
   const pageToken = ref()
   const getTask = () => {
     loading.value = true
-    http.get('https://api-drive.mypikpak.net/drive/v1/tasks', {
+    http.get('https://api-drive.mypikpak.com/drive/v1/tasks', {
       params: {
         type: 'offline',
         filters: {
@@ -94,7 +94,7 @@ import { CircleX } from '@vicons/tabler'
       })
   }
   const deleteTask = (key:number) => {
-    http.delete('https://api-drive.mypikpak.net/drive/v1/tasks', {
+    http.delete('https://api-drive.mypikpak.com/drive/v1/tasks', {
       params: {
         task_ids: filesList.value[key].id,
         _t: new Date().getTime()
