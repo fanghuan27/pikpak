@@ -496,7 +496,7 @@ import axios from 'axios';
       filters['mime_type'] = {"prefix": String(route.name) + '/'}
     }
     let parent_id = route.name !== 'list' ? '*' : route.params.id
-    http.get('https://api-drive.mypikpak.net/drive/v1/files', {
+    http.get('https://api-drive.mypikpak.com/drive/v1/files', {
       params: {
         parent_id: parent_id,
         thumbnail_size: 'SIZE_LARGE',
@@ -572,7 +572,7 @@ import axios from 'axios';
   })
   const fileInfo = ref()
   const getFile = (id:string) => {
-    return http.get('https://api-drive.mypikpak.net/drive/v1/files/' + id, {
+    return http.get('https://api-drive.mypikpak.com/drive/v1/files/' + id, {
       params: {
         _magic: '2021',
         thumbnail_size: 'SIZE_LARGE'
