@@ -11,7 +11,7 @@
       @expand="collapsed = false"
       bordered
     >
-      <a href="https://mypikpak.net/" target="_blank" class="logo-box">
+      <a href="https://mypikpak.com/" target="_blank" class="logo-box">
         <img src="https://mypikpak.net/apple-touch-icon.png" class="logo-box__icon" alt="">
         <div class="logo-box__text">PikPak</div>
       </a>
@@ -134,7 +134,7 @@ import { useRoute, useRouter } from 'vue-router'
   ])
   const userInfo = ref()
   const getUserInfo = () => {
-    http.get('https://user.mypikpak.net/v1/user/me')
+    http.get('https://user.mypikpak.com/v1/user/me')
       .then(res => {
         window.localStorage.setItem('pikpakUser', JSON.stringify(res.data))
         userInfo.value = res.data
@@ -145,7 +145,7 @@ import { useRoute, useRouter } from 'vue-router'
   }
   const aboutInfo = ref()
   const getAbout = () => {
-    http.get('https://api-drive.mypikpak.net/drive/v1/about')
+    http.get('https://api-drive.mypikpak.com/drive/v1/about')
       .then(res => {
         aboutInfo.value = res.data
       })
@@ -155,7 +155,7 @@ import { useRoute, useRouter } from 'vue-router'
   }
   const vipInfo = ref()
   const getVip = () => {
-    http.get('https://api-drive.mypikpak.net/drive/v1/privilege/vip')
+    http.get('https://api-drive.mypikpak.com/drive/v1/privilege/vip')
       .then((res:any) => {
         vipInfo.value = res.data?.data
       })
@@ -172,7 +172,7 @@ import { useRoute, useRouter } from 'vue-router'
   const code = ref()
   const showCode = ref(false)
   const postCode = () => {
-    http.post('https://api-drive.mypikpak.net/vip/v1/order/activation-code', {
+    http.post('https://api-drive.mypikpak.com/vip/v1/order/activation-code', {
       activation_code: code.value,
       data: {}
     })
@@ -208,7 +208,7 @@ import { useRoute, useRouter } from 'vue-router'
         positiveText: '确定',
         negativeText: '不确定',
         onPositiveClick: () => {
-          http.post('https://user.mypikpak.net/v1/auth/revoke', {})
+          http.post('https://user.mypikpak.com/v1/auth/revoke', {})
             .then(res => {
               window.localStorage.removeItem('pikpakLogin')
               window.localStorage.removeItem('pikpakLoginData')
