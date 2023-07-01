@@ -32,7 +32,7 @@ instance.interceptors.response.use(response => {
         if(loginDataJson.username && loginDataJson.password && !isLoginLoading) {
           console.log('wait', config.url)
           isLoginLoading = true
-          return instance.post('https://user.mypikpak.net/v1/auth/signin', {
+          return instance.post('https://user.mypikpak.com/v1/auth/signin', {
             "captcha_token": "",
             "client_id": "YNxT9w7GMdWvEOKa",
             "client_secret": "dbw2OtmVEeuUvIptb1Coyg",
