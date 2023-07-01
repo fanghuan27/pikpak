@@ -646,7 +646,7 @@ import axios from 'axios';
           }
         }
         showAddUrl.value = false
-        http.post('https://api-drive.mypikpak.net/drive/v1/files', postData)
+        http.post('https://api-drive.mypikpak.com/drive/v1/files', postData)
           .then((res:any) => {
             if(res.data.upload_type === 'UPLOAD_TYPE_UNKNOWN' || url.indexOf('PikPak://') === -1) {
               window.$message.success('添加成功')
@@ -671,7 +671,7 @@ import axios from 'axios';
     })
   }
   const deleteFile = (id:string | string[]) => {
-    http.post('https://api-drive.mypikpak.net/drive/v1/files:batchTrash', {
+    http.post('https://api-drive.mypikpak.com/drive/v1/files:batchTrash', {
       ids: typeof id === 'string' ? [id] : id
     })
       .then(() => {
@@ -925,7 +925,7 @@ import axios from 'axios';
     window.$message.success('复制成功，请点击页面右上方粘贴按钮')
   }
   const movePost = () => {
-    http.post('https://api-drive.mypikpak.net/drive/v1/files:batchMove',{
+    http.post('https://api-drive.mypikpak.com/drive/v1/files:batchMove',{
       "to":{
         "parent_id": route.params.id || ''
       },
@@ -940,7 +940,7 @@ import axios from 'axios';
       })
   }
   const copyPost = () => {
-    http.post('https://api-drive.mypikpak.net/drive/v1/files:batchCopy',{
+    http.post('https://api-drive.mypikpak.com/drive/v1/files:batchCopy',{
       "to":{
         "parent_id": route.params.id || ''
       },
@@ -967,7 +967,7 @@ import axios from 'axios';
     value: string
   } | null>()
   const namePost = () => {
-    http.patch('https://api-drive.mypikpak.net/drive/v1/files/' + newName.value?.id, {
+    http.patch('https://api-drive.mypikpak.com/drive/v1/files/' + newName.value?.id, {
       name: newName.value?.value
     })
       .then(() => {
@@ -979,7 +979,7 @@ import axios from 'axios';
   }
   const downFileList = ref<{[key:string]:any}[]>([])
   const getFloderFile = async (id?:string, page?:string,parent?:string) => {
-    const res:any = await http.get('https://api-drive.mypikpak.net/drive/v1/files', {
+    const res:any = await http.get('https://api-drive.mypikpak.com/drive/v1/files', {
       params: {
         parent_id: id || undefined,
         thumbnail_size: 'SIZE_LARGE',
