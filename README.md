@@ -5,7 +5,7 @@
  * [PikPak](https://mypikpak.com)
 
 ## Demo
- * [PikPak](https://mumuchenchen.github.io/pikpak/)
+ * [PikPak](https://fanghuan27.github.io/pikpak)
 
 ## 安装部署
 
