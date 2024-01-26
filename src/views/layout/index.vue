@@ -30,7 +30,7 @@
         <p style="margin-bottom: 0;">
           <n-tooltip :width="600" placement="right">
               <template #trigger>
-                <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/FANKzIu">￥188.体验年卡购买(可与app首月/首年优惠叠加）</a>
+                <a style="color: #306eff;" target="_blank" href="https://s.click.taobao.com/Vc46R0u">￥官方授权代理 229体验年卡(可与app首月/首年优惠叠加）</a>
               </template>
               
           </n-tooltip>
