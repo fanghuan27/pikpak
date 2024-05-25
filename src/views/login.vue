@@ -75,7 +75,7 @@ const loginPost = () => {
   }
   loading.value = true
   http.post('https://user.mypikpak.com/v1/auth/token', {
-    "grant_type": "password"
+    "grant_type": "password",
     "captcha_token": "",
     "client_id": "YNxT9w7GMdWvEOKa",
     "client_secret": "dbw2OtmVEeuUvIptb1Coyg",
