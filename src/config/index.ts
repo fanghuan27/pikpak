@@ -1,4 +1,5 @@
 export const proxy = [
+  'https://pikpak.tjsky.top',
   'https://pikpak.995579.xyz',
 ]
 
